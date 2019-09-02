@@ -1,0 +1,47 @@
+unit UnitGame_Over;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
+
+type
+  TFormGame_Over = class(TForm)
+    RichEdit1: TRichEdit;
+    Edit1: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormGame_Over: TFormGame_Over;
+
+implementation
+
+{$R *.dfm}
+
+uses nft, Unit1;
+
+procedure TFormGame_Over.Button1Click(Sender: TObject);
+begin
+  FormRecords.RichEdit1.Lines.Add(Edit1.Text + ';  очки: ' +
+    inttostr(form1.score) + ';  уничтожено метеоритов: ' +
+    inttostr(form1.score div 5) + ';  ур. корабля: ' + inttostr(form1.Lvl_Main+1) +
+    ';  ур. игры: ' + form1.Lvl_Names[form1.Lvl_Game - 1]);
+  close;
+end;
+
+procedure TFormGame_Over.Button2Click(Sender: TObject);
+begin
+  close;
+end;
+
+end.

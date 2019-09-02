@@ -1,0 +1,51 @@
+object FormRecords: TFormRecords
+  Left = 0
+  Top = 0
+  BorderStyle = bsSizeToolWin
+  Caption = #1058#1072#1073#1083#1080#1094#1072' '#1088#1077#1082#1086#1088#1076#1086#1074
+  ClientHeight = 228
+  ClientWidth = 530
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RichEdit1: TRichEdit
+    Left = 0
+    Top = 0
+    Width = 529
+    Height = 193
+    Enabled = False
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    Zoom = 100
+  end
+  object Button1: TButton
+    Left = 0
+    Top = 199
+    Width = 258
+    Height = 25
+    Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1090#1072#1073#1083#1080#1094#1091' '#1088#1077#1082#1086#1088#1076#1086#1074
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 264
+    Top = 199
+    Width = 257
+    Height = 25
+    Caption = #1047#1072#1082#1088#1099#1090#1100
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+end
